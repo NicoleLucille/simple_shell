@@ -45,7 +45,7 @@ char *_strcpy(char *dest, char *src)
 		x++;
 	}
 
-	for (y = 0; y < i; y++)
+	for (y = 0; y < x; y++)
 	{
 		dest[y] = src[y];
 	}
@@ -57,25 +57,25 @@ char *_strcpy(char *dest, char *src)
 
 /**
  * _strcmp - Contrasts two strings.
- * @string1: The first string.
- * @string2: The second string.
+ * @str1: The first string.
+ * @str2: The second string.
  *
  * Return: Either 0, a negative value, or a positive value
  */
 int _strcmp(char *str1, char *str2)
 {
-	if (string1 == NULL || string2 == NULL)
+	if (str1 == NULL || str2 == NULL)
 	{
 		return (-1);
 	}
 
-	while (*string1 && (*string1 == *string2))
+	while (*str1 && (*str1 == *str2))
 	{
-		string1++;
-		string2++;
+		str1++;
+		str2++;
 	}
 
-	return (*string1 - *string2);
+	return (*str1 - *str2);
 }
 
 /**
@@ -143,4 +143,3 @@ char *_strcat(char *dest, char *src)
 
 	return (dest);
 }
-
