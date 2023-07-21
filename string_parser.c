@@ -34,7 +34,7 @@ char **parse_data(char *data_string)
 		string_token = strtok(NULL, delimiter);
 		if (string_token != NULL)
 		{
-			len = _strlen(str_token);
+			len = _strlen(num_token);
 		}
 		num_token++;
 	}
@@ -53,7 +53,7 @@ void free_arguments(char **arguments)
 
 	while (arguments[i] != NULL)
 	{
-		free(arguments[j]);
+		free(arguments[i]);
 		i++;
 	}
 	free(arguments);
