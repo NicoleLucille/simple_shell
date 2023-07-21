@@ -4,7 +4,7 @@
  * _strdup - Generates a duplicate of a string.
  * @source_string: The source string to be duplicated.
  *
- * Return: A pointer to the duplicated string, or NULL if the memory allocation fails.
+ * Return:point to the duplicated string, or NULL if the mem allocation fails.
  */
 char *_strdup(char *source_string)
 {
@@ -22,7 +22,7 @@ char *_strdup(char *source_string)
 	{
 		for (i = 0; i < _strlen(source_string); i++)
 		{
-			dupString[j] = source_string[i];
+			dupString[i] = source_string[i];
 		}
 
 		dupString[i] = '\0';
