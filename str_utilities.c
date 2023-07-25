@@ -45,7 +45,7 @@ char *_strcpy(char *dest, char *src)
 		x++;
 	}
 
-	for (y = 0; y < i; y++)
+	for (y = 0; y < x; y++)
 	{
 		dest[y] = src[y];
 	}
@@ -62,7 +62,7 @@ char *_strcpy(char *dest, char *src)
  *
  * Return: Either 0, a negative value, or a positive value
  */
-int _strcmp(char *str1, char *str2)
+int _strcmp(char *string1, char *string2)
 {
 	if (string1 == NULL || string2 == NULL)
 	{
