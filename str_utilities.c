@@ -62,7 +62,7 @@ char *_strcpy(char *dest, char *src)
  *
  * Return: Either 0, a negative value, or a positive value
  */
-int _strcmp(char *str1, char *str2)
+int _strcmp(char *string1, char *string2)
 {
 	if (str1 == NULL || str2 == NULL)
 	{
