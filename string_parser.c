@@ -1,60 +1,59 @@
 #include "main.h"
 #include <string.h>
-
 /**
- * parse_data - Data parsing function for the input obtained from getline
- * @data_string: User input string
- * Return: An array of strings representing tokenized values
+ * parse_input - Function to parse the data obtained from getline
+ * @input_str: User input string
+ * Return: Tokenized values as an array of strings
  */
-char **parse_data(char *data_string)
+char **parse_input(char *input_str)
 {
 	const char *delimiter = " \n\t\r";
-	char *string_token;
+	char *str_token;
 	char **arguments;
-	size_t num_token = 0;
-	size_t len = 0;
+	size_t token_count = 0;
+	size_t length = 0;
 
-	arguments = malloc(sizeof(char *) * (num_token + 5));
+	arguments = malloc(sizeof(char *) * (token_count + 5));
 	if (arguments == NULL)
 	{
 		free_arguments(arguments);
 		return (NULL);
 	}
-	string_token = strtok(data_string, delimiter);
-	len = _strlen(string_token);
-	while (string_token != NULL)
+	str_token = strtok(input_str, delimiter);
+	length = _strlen(str_token);
+	while (str_token != NULL)
 	{
-		arguments[num_token] = malloc(len + 1);
-		if (arguments[num_token] == NULL)
+		arguments[token_count] = malloc(length + 1);
+		if (arguments[token_count] == NULL)
 		{
 			free_arguments(arguments);
 			return (NULL);
 		}
-		_strcpy(arguments[num_token], string_token);
-		string_token = strtok(NULL, delimiter);
-		if (string_token != NULL)
+		_strcpy(arguments[token_count], str_token);
+		str_token = strtok(NULL, delimiter);
+		if (str_token != NULL)
 		{
-			len = _strlen(num_token);
+			length = _strlen(str_token);
 		}
-		num_token++;
+		token_count++;
 	}
-	arguments[num_token] = NULL;
+	arguments[token_count] = NULL;
 	return (arguments);
 }
 
 /**
- * free_arguments - Token array deallocation function
- * @arguments: A pointer to a string array (tokens)
- * Return: Void
+ * free_arguments - Function to free the tokens array
+ * @arguments: Pointer to an array of strings (tokens)
+ * Return: None
  */
 void free_arguments(char **arguments)
 {
-	int i = 0;
+	int j = 0;
 
-	while (arguments[i] != NULL)
+	while (arguments[j] != NULL)
 	{
-		free(arguments[i]);
-		i++;
+		free(arguments[j]);
+		j++;
 	}
 	free(arguments);
 }
