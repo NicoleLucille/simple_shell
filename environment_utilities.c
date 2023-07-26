@@ -3,6 +3,8 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
+#include <stddef.h>
+#include <stdlib.h>
 
 /**
  * _getenv - finds the value associated with an environment variable
