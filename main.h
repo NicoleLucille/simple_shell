@@ -3,7 +3,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stddef.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -25,4 +24,4 @@ char *_strcat(char *dest, char *src);
 char *_strdup(char *source_string);
 void free_arguments(char **arguments);
 
-#endif
+#endif /* MAIN_H */
