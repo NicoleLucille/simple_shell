@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <string.h>
 /**
  * main - The point of entry for the custom shell
  * This function serves as a fundamental shell that,
